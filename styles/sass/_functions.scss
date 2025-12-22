@@ -1,0 +1,11 @@
+@function darkenBorder($color) {
+  @return darken($color, 20%);
+}
+
+@function getFontColor($bgColor) {
+  @if (lightness($bgColor) > 50%) {
+    @return $dark;
+  } @else {
+    @return $white;
+  }
+}

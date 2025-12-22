@@ -1,0 +1,20 @@
+/* =========================
+   Base globale
+   ========================= */
+
+body {
+  background-color: $nightblue;
+  color: $white;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 16px;      // mobile
+  line-height: 1.6;
+  margin: 0 20px;
+}
+
+/* Tablet / Desktop */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    margin: 0 30px;
+  }
+}

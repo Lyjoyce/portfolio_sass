@@ -5,18 +5,12 @@ $gray: #868e96;
 $lightgray: #f3efef;
 $dark: #171c28;
 $white: #ffffff;
-$test:#B55A5A;
-$nightblue:  rgb(1, 1, 29);
+$nightblue: rgb(1, 1, 29);
 
 $colors: (
-    primary: #55198B,
-    secondary: #aaa5FF,
-    gray: #6c757d,
-    light: #f8f9fa,
-    dark: #343a40,
-    accent: #fec131,
-    danger: #dc3545,
-    blue: #007bff,
-    info: #17a2b8,
-    green: #28a745,
- );
+  primary: $primary,
+  secondary: $secondary,
+  accent: $accent,
+  gray: $gray,
+  dark: $dark
+);
