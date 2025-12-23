@@ -6,84 +6,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Sabrina L</title>
     <link rel="stylesheet" href="styles/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
     <header class="header-website">
-  <nav class="nav">
-    <a href="/" class="logo">
-      Sabrina<span>.</span>
-    </a>
+        <nav class="nav">
+            <a href="/" class="logo">
+                Sabrina<span>.</span>
+            </a>
 
-    <ul class="nav-links">
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#projects">Projets</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <a href="#contact" class="btn btn-dark">Contact</a>
-    </ul>
-  </nav>
-</header>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <a href="#contact" class="btn btn-dark">Contact</a>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="section-display left-content">
             <article class="text-content">
                 <h1 class="title"> Sabrina L</h1>
-                <p class=" paragraph presentation"> I learn web developpement : html5, css3, JavaScript</p>
+                <p class="paragraph presentation">
+                    Test & Validation logiciel — Qualité, rigueur et sens utilisateur
+                </p>
+
                 <div class="socials">
-                    socials icons
+                    <a href="https://github.com/TON_GITHUB" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/TON_LINKEDIN" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
                 </div>
+
                 <div class="action-div">
-                    <button class="btn btn-primary">Contact</button>
-                    <button class="btn btn-secondary">CV</button>
-                    <button class="btn btn-accent">Projets</button>
+                    <a href="#contact" class="btn btn-primary">Me contacter</a>
+                    <a href="cv.pdf" class="btn btn-secondary">Télécharger mon CV</a>
+                    <a href="#projects" class="btn btn-accent">Voir mes projets</a>
                 </div>
+
+
             </article>
             <div class="illustration">
-                <img src="img/presentation.png" alt="illustration travail activités web">
+                <h3>Illustration</h3>
+                <img src="img/presentation.png" alt="Analyse et validation d’une application web">
+                <p class="illustration-caption">
+                    Analyse des besoins • Tests • Validation qualité
+                </p>
             </div>
+
         </section>
+
+        <section class="section-about">
+            <h2>Mon approche</h2>
+            <p>
+                Comprendre les besoins humains, les traduire en exigences,
+                tester les solutions et vérifier qu’elles répondent réellement
+                aux attentes utilisateurs.
+            </p>
+        </section>
+        <section class="section-skills">
+            <h2 class="section-title">Compétences QA</h2>
+
+            <ul class="skills-checklist">
+                <li><strong>Analyse :</strong> besoins et exigences fonctionnelles</li>
+                <li>Rédaction de cas de tests et scénarios</li>
+                <li>Tests fonctionnels d’applications web</li>
+                <li>Détection et documentation des anomalies</li>
+                <li>Analyse des résultats de tests</li>
+                <li>Optimisation des procédures de test</li>
+                <li>Collaboration avec les développeurs</li>
+                <li>Communication claire et reporting</li>
+                <li>Sens utilisateur & logique métier</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section-projects">
+            <h2>Projets</h2>
+            <article>
+                <h3>Tests d’une application web</h3>
+                <p>Analyse des besoins, rédaction de scénarios de tests et détection d’anomalies.</p>
+                <a href="https://github.com/Lyjoyce/quickrequest-qa" class="btn btn-github" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    Voir sur GitHub
+                </a>
+
+            </article>
+        </section>
+
+
+
 
     </main>
     <footer class="site-footer">
-  <div class="footer-container">
+        <div class="footer-container">
 
-    <!-- Identité -->
-    <div class="footer-brand">
-      <a href="#" class="footer-logo">
-        Sabrina<span>.</span>
-      </a>
-      <p class="footer-tagline">
-        Développement web • QA • Curiosité & rigueur
-      </p>
-    </div>
+            <!-- Identité -->
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">
+                    Sabrina<span>.</span>
+                </a>
+                <p class="footer-tagline">
+                    Développement web • QA • Curiosité & rigueur
+                </p>
+            </div>
 
-    <!-- Centres d’intérêt -->
-    <div class="footer-section">
-      <h3>Centres d’intérêt</h3>
-      <ul>
-        <li>🌿 Phytothérapie</li>
-        <li>💧 Aromathérapie</li>
-        <li>🧘 Bien-être</li>
-        <li>✈️ Voyages</li>
-      </ul>
-    </div>
+            <!-- Centres d’intérêt -->
+            <div class="footer-section">
+                <h3>Centres d’intérêt</h3>
+                <ul>
+                    <li>🌿 Phytothérapie</li>
+                    <li>💧 Aromathérapie</li>
+                    <li>🧘 Bien-être</li>
+                    <li>✈️ Voyages</li>
+                </ul>
+            </div>
 
-    <!-- Contact -->
-    <div class="footer-section">
-      <h3>Contact</h3>
-      <ul>
-        <li><a href="mailto:sabrina@email.com">sabrina@email.com</a></li>
-        <li><a href="https://github.com/ton-github" target="_blank">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/ton-linkedin" target="_blank">LinkedIn</a></li>
-      </ul>
-    </div>
+            <!-- Contact -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:sabrina@email.com">sabrina@email.com</a></li>
+                </ul>
 
-  </div>
+                <div class="footer-socials">
 
-  <div class="footer-bottom">
-    <p>© 2025 Sabrina L — Portfolio personnel</p>
-  </div>
-</footer>
+                    <a href="https://github.com/ton-github" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+
+                    <a href="https://linkedin.com/in/ton-linkedin" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Sabrina L — Portfolio personnel</p>
+            </div>
+    </footer>
 
 </body>
 

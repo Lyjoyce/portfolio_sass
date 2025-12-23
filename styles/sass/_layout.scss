@@ -88,11 +88,27 @@ section {
     }
   }
 
+  /* Section Illustration */
+  .illustration {
+    flex: 0 0 45%; /* largeur de la colonne image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: clamp(1rem, 2vw, 2rem); /* Ajuste visuellement avec le titre */
+  }
+
   .illustration img {
-    max-width: 90%;
-    margin: auto;
-    display: block;
+    max-width: 55%;
+    opacity: 0.9;
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  }
+
+  .illustration-caption {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: $gray;
+    text-align: center;
   }
 }
 /* =========================
@@ -141,9 +157,20 @@ section {
         justify-content: flex-start;
       }
     }
+    /* Section Illustration */
+     .section-display {
+      flex-direction: row;
+      align-items: flex-start; /* Alignement vertical de l'image et du texte */
+      gap: 4rem;
+      text-align: left;
+    }
+
+    .text-content {
+      flex: 1;
+    }
 
     .illustration img {
-      max-width: 100%;
+      max-width: 50%; /* Réduire encore un peu l'image pour une meilleure proportion */
     }
   }
 }
@@ -218,6 +245,39 @@ section {
   text-align: center;
   font-size: 14px;
   color: $gray;
+}
+/* =========================
+   Footer - Socials
+   ========================= */
+
+.footer-socials {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+
+  .footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+  a {
+    font-size: 22px;
+    color: $gray;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $white;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .footer-socials {
+    justify-content: flex-start;
+  }
 }
 
 /* Desktop */

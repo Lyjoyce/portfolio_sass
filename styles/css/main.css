@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* =========================
    Base globale
    ========================= */
@@ -69,6 +70,7 @@ section {
   text-align: center;
   max-width: 1200px;
   margin: 4rem auto;
+  /* Section Illustration */
 }
 .section-display .text-content .title {
   font-size: 42px;
@@ -96,11 +98,24 @@ section {
   gap: 1rem;
   justify-content: center;
 }
+.section-display .illustration {
+  flex: 0 0 45%; /* largeur de la colonne image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(1rem, 2vw, 2rem); /* Ajuste visuellement avec le titre */
+}
 .section-display .illustration img {
-  max-width: 90%;
-  margin: auto;
-  display: block;
+  max-width: 55%;
+  opacity: 0.9;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+}
+.section-display .illustration-caption {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #868e96;
+  text-align: center;
 }
 
 /* =========================
@@ -127,6 +142,7 @@ section {
     align-items: center;
     text-align: left;
     gap: 4rem;
+    /* Section Illustration */
   }
   .section-display .text-content .title {
     font-size: 64px;
@@ -140,8 +156,17 @@ section {
   .section-display .text-content .action-div {
     justify-content: flex-start;
   }
+  .section-display .section-display {
+    flex-direction: row;
+    align-items: flex-start; /* Alignement vertical de l'image et du texte */
+    gap: 4rem;
+    text-align: left;
+  }
+  .section-display .text-content {
+    flex: 1;
+  }
   .section-display .illustration img {
-    max-width: 100%;
+    max-width: 50%; /* Réduire encore un peu l'image pour une meilleure proportion */
   }
 }
 /* =========================
@@ -206,6 +231,36 @@ section {
   color: #868e96;
 }
 
+/* =========================
+   Footer - Socials
+   ========================= */
+.footer-socials {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.footer-socials .footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-socials a {
+  font-size: 22px;
+  color: #868e96;
+  transition: all 0.3s ease;
+}
+.footer-socials a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .footer-socials {
+    justify-content: flex-start;
+  }
+}
 /* Desktop */
 @media (min-width: 768px) {
   .footer-container {
@@ -280,4 +335,142 @@ section {
 }
 .btn-dark:hover {
   background-color: rgb(41.619047619, 50.6666666667, 72.380952381);
+}
+
+/* =========================
+   Socials (GitHub / LinkedIn)
+   ========================= */
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0 2.5rem;
+}
+.socials a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(1.85, 1.85, 53.65);
+  color: #ffffff;
+  font-size: 22px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+  /*&:hover {
+    transform: translateY(-4px);
+    background-color: $primary;
+    color: $accent;
+  }*/
+}
+
+.socials a[href*=github]:hover {
+  background-color: rgb(71.7835365854, 21.112804878, 117.387195122);
+}
+
+.socials a[href*=linkedin]:hover {
+  background-color: #aaa5ff;
+  color: #171c28;
+}
+
+@media (min-width: 768px) {
+  .socials {
+    justify-content: flex-start;
+    margin: 2.5rem 0 3rem;
+  }
+}
+/* =========================
+   Section Compétences QA
+   ========================= */
+.skills-checklist li strong {
+  color: #fec131;
+}
+
+.section-skills {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #fec131;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.skills-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+.skills-checklist li {
+  position: relative;
+  padding: 1rem 1.25rem 1rem 3rem;
+  background-color: rgb(1.68, 1.68, 48.72);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+.skills-checklist li::before {
+  content: "✔";
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fec131;
+  font-weight: 700;
+  font-size: 18px;
+}
+.skills-checklist li:hover {
+  transform: translateY(-4px);
+  background-color: rgb(2.36, 2.36, 68.44);
+}
+
+@media (min-width: 768px) {
+  .section-skills {
+    text-align: left;
+  }
+  .section-title::after {
+    margin-left: 0;
+  }
+  .skills-checklist {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* =========================
+   Section Projets
+   ========================= */
+/* =========================
+   Bouton Projet - GitHub
+   ========================= */
+.btn-github {
+  background-color: rgb(1.51, 1.51, 43.79);
+  border: 1px solid rgb(0.15, 0.15, 4.35);
+  color: #ffffff;
+}
+.btn-github:hover {
+  background-color: #55198b;
+  border-color: #55198b;
+  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */

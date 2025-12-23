@@ -1,0 +1,160 @@
+/* =========================
+   Socials (GitHub / LinkedIn)
+   ========================= */
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  margin: 2rem 0 2.5rem; // espace entre texte et boutons
+
+  a {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: lighten($nightblue, 5%);
+    color: $white;
+
+    font-size: 22px;
+    text-decoration: none;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+
+    /*&:hover {
+      transform: translateY(-4px);
+      background-color: $primary;
+      color: $accent;
+    }*/
+  }
+}
+
+.socials a[href*="github"] {
+  &:hover {
+    background-color: darken($primary, 5%);
+  }
+}
+
+.socials a[href*="linkedin"] {
+  &:hover {
+    background-color: $secondary;
+    color: $dark;
+  }
+}
+
+@media (min-width: 768px) {
+  .socials {
+    justify-content: flex-start;
+    margin: 2.5rem 0 3rem;
+  }
+}
+/* =========================
+   Section Compétences QA
+   ========================= */
+.skills-checklist li strong {
+  color: $accent;
+}
+
+.section-skills {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: $accent;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+  }
+}
+
+.skills-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+
+  li {
+    position: relative;
+    padding: 1rem 1.25rem 1rem 3rem;
+
+    background-color: lighten($nightblue, 4%);
+    border-radius: 8px;
+
+    color: $white;
+    font-size: 16px;
+    text-align: left;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+
+    &::before {
+      content: '✔';
+      position: absolute;
+      left: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      color: $accent;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      background-color: lighten($nightblue, 8%);
+    }
+  }
+}
+@media (min-width: 768px) {
+  .section-skills {
+    text-align: left;
+  }
+
+  .section-title::after {
+    margin-left: 0;
+  }
+
+  .skills-checklist {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* =========================
+   Section Projets
+   ========================= */
+/* =========================
+   Bouton Projet - GitHub
+   ========================= */
+   .btn-github {
+  background-color: lighten($nightblue, 3%);
+  border: 1px solid darken($nightblue, 5%);
+  color: $white;
+
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
+  }
+}
