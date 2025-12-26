@@ -3,7 +3,7 @@
    Base globale
    ========================= */
 body {
-  background-color: rgb(1, 1, 29);
+  background-color: #01011D;
   color: #ffffff;
   font-family: "Montserrat", system-ui, sans-serif;
   font-size: 16px;
@@ -11,7 +11,7 @@ body {
   margin: 0 20px;
 }
 
-/* Tablet / Desktop */
+/* Desktop */
 @media (min-width: 768px) {
   body {
     font-size: 18px;
@@ -25,6 +25,14 @@ section {
   margin: 4rem 0;
 }
 
+/* =========================
+   Media Queries
+   ========================= */
+@media (min-width: 768px) {
+  section {
+    margin: 8rem 0;
+  }
+}
 /* =========================
    Header / Navigation
    ========================= */
@@ -60,6 +68,21 @@ section {
   padding: 0;
 }
 
+/*@media (min-width: 768px)*/
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .nav-links a:hover {
+    color: #fec131;
+  }
+}
 /* =========================
    Section Hero
    ========================= */
@@ -121,54 +144,39 @@ section {
 /* =========================
    Media Queries
    ========================= */
-@media (min-width: 768px) {
-  section {
-    margin: 8rem 0;
-  }
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-  }
-  .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .nav-links a:hover {
-    color: #fec131;
-  }
-  .section-display {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    gap: 4rem;
-    /* Section Illustration */
-  }
-  .section-display .text-content .title {
-    font-size: 64px;
-  }
-  .section-display .text-content .title::after {
-    margin-left: 0;
-  }
-  .section-display .text-content .paragraph {
-    font-size: 22px;
-  }
-  .section-display .text-content .action-div {
-    justify-content: flex-start;
-  }
-  .section-display .section-display {
-    flex-direction: row;
-    align-items: flex-start; /* Alignement vertical de l'image et du texte */
-    gap: 4rem;
-    text-align: left;
-  }
-  .section-display .text-content {
-    flex: 1;
-  }
-  .section-display .illustration img {
-    max-width: 50%; /* Réduire encore un peu l'image pour une meilleure proportion */
-  }
+/*section display (HERO)*/
+.section-display {
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 4rem;
+  /* Section Illustration */
 }
+.section-display .text-content .title {
+  font-size: 64px;
+}
+.section-display .text-content .title::after {
+  margin-left: 0;
+}
+.section-display .text-content .paragraph {
+  font-size: 22px;
+}
+.section-display .text-content .action-div {
+  justify-content: flex-start;
+}
+.section-display .section-display {
+  flex-direction: row;
+  align-items: flex-start; /* Alignement vertical de l'image et du texte */
+  gap: 4rem;
+  text-align: left;
+}
+.section-display .text-content {
+  flex: 1;
+}
+.section-display .illustration img {
+  max-width: 50%; /* Réduire encore un peu l'image pour une meilleure proportion */
+}
+
 /* =========================
    Footer
    ========================= */
@@ -181,12 +189,28 @@ section {
 .footer-container {
   max-width: 1200px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 3rem;
   text-align: center;
 }
 
+.footer-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .footer-columns {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* Identité */
 .footer-brand .footer-logo {
   font-size: 28px;
   font-weight: 700;
@@ -201,7 +225,13 @@ section {
   font-size: 16px;
   color: #868e96;
 }
+@media (min-width: 768px) {
+  .footer-brand {
+    flex: 1;
+  }
+}
 
+/* Sections */
 .footer-section h3 {
   font-size: 18px;
   margin-bottom: 1rem;
@@ -219,55 +249,49 @@ section {
 .footer-section ul li a {
   color: #868e96;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 .footer-section ul li a:hover {
   color: #fec131;
 }
+@media (min-width: 768px) {
+  .footer-section {
+    flex: 1;
+  }
+}
 
+/* Contact */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 16px;
+  color: #868e96;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.footer-socials a i {
+  font-size: 18px;
+}
+.footer-socials a:hover {
+  color: #fec131;
+  transform: translateX(4px);
+}
+
+/* Bas de page */
 .footer-bottom {
   margin-top: 3rem;
   text-align: center;
   font-size: 14px;
   color: #868e96;
+  width: 100%;
 }
 
-/* =========================
-   Footer - Socials
-   ========================= */
-.footer-socials {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-.footer-socials .footer-socials a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.footer-socials a {
-  font-size: 22px;
-  color: #868e96;
-  transition: all 0.3s ease;
-}
-.footer-socials a:hover {
-  color: #ffffff;
-  transform: translateY(-3px);
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-  .footer-socials {
-    justify-content: flex-start;
-  }
-}
-/* Desktop */
-@media (min-width: 768px) {
-  .footer-container {
-    grid-template-columns: repeat(3, 1fr);
-    text-align: left;
-  }
-}
 .btn {
   padding: 15px 20px;
   border-radius: 6px;
@@ -338,42 +362,66 @@ section {
 }
 
 /* =========================
-   Socials (GitHub / LinkedIn)
+   Bouton Projet - GitHub
    ========================= */
+/* components/_buttons.scss */
+.btn-github {
+  background-color: rgb(1.51, 1.51, 43.79);
+  border: 1px solid rgb(0.15, 0.15, 4.35);
+  color: #ffffff;
+}
+.btn-github:hover {
+  background-color: #55198b;
+  border-color: #55198b;
+  color: #ffffff;
+}
+
+/* =========================
+   Socials (Hero : (GitHub / LinkedIn)
+   ========================= */
+/*
 .socials {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
   margin: 2rem 0 2.5rem;
-}
-.socials a {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: rgb(1.85, 1.85, 53.65);
-  color: #ffffff;
-  font-size: 22px;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s ease;
-  /*&:hover {
-    transform: translateY(-4px);
-    background-color: $primary;
-    color: $accent;
-  }*/
-}
 
-.socials a[href*=github]:hover {
-  background-color: rgb(71.7835365854, 21.112804878, 117.387195122);
-}
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
 
-.socials a[href*=linkedin]:hover {
-  background-color: #aaa5ff;
-  color: #171c28;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+
+    border-radius: 999px;
+    background-color: lighten($nightblue, 5%);
+    color: $white;
+
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    i {
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: $primary;
+      transform: translateY(-4px);
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -382,6 +430,69 @@ section {
     margin: 2.5rem 0 3rem;
   }
 }
+
+.socials a,
+.footer-socials a {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+// GitHub 
+.socials a[href*="github"]:hover {
+  background-color: $primary;
+  color: $white;
+}
+ LinkedIn 
+.socials a[href*="linkedin"]:hover {
+  background-color: $secondary;
+  color: $dark;
+}
+
+@media (min-width: 768px) {
+  .socials {
+    justify-content: flex-start;
+    margin: 2.5rem 0 3rem;
+  }
+}
+
+
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: $gray;
+  text-decoration: none;
+  font-size: 16px;
+
+  transition: color 0.3s ease;
+}
+
+.footer-socials a i {
+  font-size: 18px;
+}
+
+
+.footer-socials a:hover {
+  color: $accent;
+}
+
+@media (min-width: 768px) {
+  .footer-socials {
+    justify-content: flex-start;
+  }
+}
+  */
 /* =========================
    Section Compétences QA
    ========================= */
@@ -410,6 +521,13 @@ section {
   background-color: #fec131;
   margin: 1rem auto 0;
   border-radius: 2px;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: #868e96;
+  font-size: 16px;
 }
 
 .skills-checklist {
@@ -446,6 +564,24 @@ section {
   background-color: rgb(2.36, 2.36, 68.44);
 }
 
+/* =========================
+   Groupes de compétences
+   ========================= */
+.skills-group {
+  margin-bottom: 3rem;
+}
+.skills-group h3 {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .skills-group {
+    margin-bottom: 4rem;
+  }
+}
 @media (min-width: 768px) {
   .section-skills {
     text-align: left;
@@ -457,20 +593,4 @@ section {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-}
-/* =========================
-   Section Projets
-   ========================= */
-/* =========================
-   Bouton Projet - GitHub
-   ========================= */
-.btn-github {
-  background-color: rgb(1.51, 1.51, 43.79);
-  border: 1px solid rgb(0.15, 0.15, 4.35);
-  color: #ffffff;
-}
-.btn-github:hover {
-  background-color: #55198b;
-  border-color: #55198b;
-  color: #ffffff;
 }/*# sourceMappingURL=main.css.map */

@@ -1,6 +1,16 @@
-@import 'variables';
-@import 'functions';
-@import 'base';
-@import 'layout';
-@import 'buttons';
-@import 'components';
+// Utils
+@import 'utils/variables';
+@import 'utils/functions';
+
+// Base
+@import 'base/base';
+
+// Layout
+@import 'layout/header';
+@import 'layout/hero';
+@import 'layout/footer';
+
+// Components
+@import 'components/buttons';
+@import 'components/socials';
+@import 'components/skills';

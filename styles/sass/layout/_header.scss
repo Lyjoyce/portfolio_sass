@@ -1,0 +1,55 @@
+/* =========================
+   Header / Navigation
+   ========================= */
+
+.header-website {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+
+  span {
+    color: $accent;
+  }
+}
+
+.nav-links {
+  display: none; // mobile : caché
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*@media (min-width: 768px)*/
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+}
+}

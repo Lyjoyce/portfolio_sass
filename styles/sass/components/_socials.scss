@@ -1,0 +1,117 @@
+/* =========================
+   Socials (Hero : (GitHub / LinkedIn)
+   ========================= */
+/*
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0 2.5rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+
+    border-radius: 999px;
+    background-color: lighten($nightblue, 5%);
+    color: $white;
+
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    i {
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: $primary;
+      transform: translateY(-4px);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .socials {
+    justify-content: flex-start;
+    margin: 2.5rem 0 3rem;
+  }
+}
+
+.socials a,
+.footer-socials a {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+// GitHub 
+.socials a[href*="github"]:hover {
+  background-color: $primary;
+  color: $white;
+}
+ LinkedIn 
+.socials a[href*="linkedin"]:hover {
+  background-color: $secondary;
+  color: $dark;
+}
+
+@media (min-width: 768px) {
+  .socials {
+    justify-content: flex-start;
+    margin: 2.5rem 0 3rem;
+  }
+}
+
+
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: $gray;
+  text-decoration: none;
+  font-size: 16px;
+
+  transition: color 0.3s ease;
+}
+
+.footer-socials a i {
+  font-size: 18px;
+}
+
+
+.footer-socials a:hover {
+  color: $accent;
+}
+
+@media (min-width: 768px) {
+  .footer-socials {
+    justify-content: flex-start;
+  }
+}
+  */

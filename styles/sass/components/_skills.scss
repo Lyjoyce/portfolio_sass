@@ -1,61 +1,4 @@
 /* =========================
-   Socials (GitHub / LinkedIn)
-   ========================= */
-
-.socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-
-  margin: 2rem 0 2.5rem; // espace entre texte et boutons
-
-  a {
-    width: 48px;
-    height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-    background-color: lighten($nightblue, 5%);
-    color: $white;
-
-    font-size: 22px;
-    text-decoration: none;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-    transition: all 0.3s ease;
-
-    /*&:hover {
-      transform: translateY(-4px);
-      background-color: $primary;
-      color: $accent;
-    }*/
-  }
-}
-
-.socials a[href*="github"] {
-  &:hover {
-    background-color: darken($primary, 5%);
-  }
-}
-
-.socials a[href*="linkedin"] {
-  &:hover {
-    background-color: $secondary;
-    color: $dark;
-  }
-}
-
-@media (min-width: 768px) {
-  .socials {
-    justify-content: flex-start;
-    margin: 2.5rem 0 3rem;
-  }
-}
-/* =========================
    Section Compétences QA
    ========================= */
 .skills-checklist li strong {
@@ -84,6 +27,12 @@
     margin: 1rem auto 0;
     border-radius: 2px;
   }
+}
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: $gray;
+  font-size: 16px;
 }
 
 .skills-checklist {
@@ -127,6 +76,27 @@
     }
   }
 }
+/* =========================
+   Groupes de compétences
+   ========================= */
+
+.skills-group {
+  margin-bottom: 3rem;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+    color: $white;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .skills-group {
+    margin-bottom: 4rem;
+  }
+}
+
 @media (min-width: 768px) {
   .section-skills {
     text-align: left;
@@ -139,22 +109,5 @@
   .skills-checklist {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-  }
-}
-/* =========================
-   Section Projets
-   ========================= */
-/* =========================
-   Bouton Projet - GitHub
-   ========================= */
-   .btn-github {
-  background-color: lighten($nightblue, 3%);
-  border: 1px solid darken($nightblue, 5%);
-  color: $white;
-
-  &:hover {
-    background-color: $primary;
-    border-color: $primary;
-    color: $white;
   }
 }

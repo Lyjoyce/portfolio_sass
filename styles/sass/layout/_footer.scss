@@ -1,0 +1,113 @@
+/* =========================
+   Footer
+   ========================= */
+
+   .site-footer {
+  background-color: darken($nightblue, 2%);
+  padding: 4rem 1rem 2rem;
+  color: $white;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+.footer-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* Identité */
+.footer-brand {
+  .footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: $white;
+    text-decoration: none;
+
+    span { color: $accent; }
+  }
+
+  .footer-tagline {
+    margin-top: 1rem;
+    font-size: 16px;
+    color: $gray;
+  }
+
+  @media (min-width: 768px) {
+    flex: 1;
+  }
+}
+
+/* Sections */
+.footer-section {
+  h3 { font-size: 18px; margin-bottom: 1rem; color: $white; }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+      color: $gray;
+
+      a {
+        color: $gray;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover { color: $accent; }
+      }
+    }
+  }
+
+  @media (min-width: 768px) { flex: 1; }
+}
+
+/* Contact */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 16px;
+    color: $gray;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    i { font-size: 18px; }
+
+    &:hover {
+      color: $accent;
+      transform: translateX(4px);
+    }
+  }
+}
+
+/* Bas de page */
+.footer-bottom {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 14px;
+  color: $gray;
+  width: 100%; // pour être bien centré sous les colonnes
+}

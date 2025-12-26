@@ -36,3 +36,19 @@
     }
   }
 }
+/* =========================
+   Bouton Projet - GitHub
+   ========================= */
+/* components/_buttons.scss */
+
+.btn-github {
+  background-color: lighten($nightblue, 3%);
+  border: 1px solid darken($nightblue, 5%);
+  color: $white;
+
+  &:hover {
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
+  }
+}
