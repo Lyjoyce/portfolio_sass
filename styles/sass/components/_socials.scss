@@ -1,7 +1,7 @@
 /* =========================
    Socials (Hero : (GitHub / LinkedIn)
    ========================= */
-/*
+
 .socials {
   display: flex;
   justify-content: center;
@@ -40,11 +40,23 @@
     }
 
     &:hover {
-      background-color: $primary;
       transform: translateY(-4px);
     }
   }
+
+  /* GitHub */
+  a[href*="github"]:hover {
+    background-color: $primary;
+    color: $white;
+  }
+
+  /* LinkedIn */
+  a[href*="linkedin"]:hover {
+    background-color: $secondary;
+    color: $dark;
+  }
 }
+
 
 @media (min-width: 768px) {
   .socials {
@@ -80,7 +92,7 @@
   }
 }
 
-
+/*
 
 .footer-socials {
   display: flex;

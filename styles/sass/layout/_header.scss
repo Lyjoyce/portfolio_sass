@@ -19,6 +19,25 @@
 }
 
 .logo {
+  display: inline-block; // IMPORTANT
+  font-size: 26px;       // au lieu de 22px
+  font-weight: 700;
+  color: $white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+
+  span {
+    color: $accent;
+  }
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+/*
+.logo {
   font-size: 22px;
   font-weight: 700;
   color: $white;
@@ -28,7 +47,7 @@
     color: $accent;
   }
 }
-
+*/
 .nav-links {
   display: none; // mobile : caché
   list-style: none;

@@ -7,6 +7,9 @@
   padding: 4rem 1rem 2rem;
   color: $white;
 }
+.site-footer .logo {
+  font-size: 32px; // identité plus forte dans le footer
+}
 
 .footer-container {
   max-width: 1200px;
@@ -32,25 +35,8 @@
 }
 
 /* Identité */
-.footer-brand {
-  .footer-logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: $white;
-    text-decoration: none;
-
-    span { color: $accent; }
-  }
-
-  .footer-tagline {
-    margin-top: 1rem;
-    font-size: 16px;
-    color: $gray;
-  }
-
-  @media (min-width: 768px) {
-    flex: 1;
-  }
+.site-footer .logo {
+  font-size: 32px; // identité plus forte dans le footer
 }
 
 /* Sections */
