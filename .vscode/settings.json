@@ -1,4 +1,8 @@
 {
+  "window.titleBarStyle": "native",
+  "window.menuBarVisibility": "visible"
+}
+{
     "liveSassCompile.settings.formats": [
         {
             "format": "expanded",

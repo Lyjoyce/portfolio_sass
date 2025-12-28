@@ -1,7 +1,8 @@
-/* layout/_projects.scss */
+// ==================================================
+// PROJECTS — section projets
+// ==================================================
 
 .section-projects {
-  // Ici tu mets le style global de ta section projets
   margin: 4rem 0;
 
   h2 {
@@ -11,11 +12,12 @@
     margin-bottom: 2rem;
   }
 
+  // --- Carte projet ---
   article {
     background-color: lighten($nightblue, 4%);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
     margin-bottom: 2rem;
 
     h3 {

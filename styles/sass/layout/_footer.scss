@@ -1,25 +1,35 @@
-/* =========================
-   Footer
-   ========================= */
+// ==================================================
+// FOOTER — structure globale
+// ==================================================
 
-   .site-footer {
+.site-footer {
   background-color: darken($nightblue, 2%);
   padding: 4rem 1rem 2rem;
   color: $white;
+
+  .logo {
+    font-size: 32px;
+  }
 }
-.site-footer .logo {
-  font-size: 32px; // identité plus forte dans le footer
-}
+
+// ==================================================
+// FOOTER — conteneur principal
+// ==================================================
 
 .footer-container {
   max-width: 1200px;
   margin: auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
   text-align: center;
 }
+
+// ==================================================
+// FOOTER — colonnes
+// ==================================================
 
 .footer-columns {
   display: flex;
@@ -34,14 +44,16 @@
   }
 }
 
-/* Identité */
-.site-footer .logo {
-  font-size: 32px; // identité plus forte dans le footer
-}
+// ==================================================
+// FOOTER — sections
+// ==================================================
 
-/* Sections */
 .footer-section {
-  h3 { font-size: 18px; margin-bottom: 1rem; color: $white; }
+  h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color: $white;
+  }
 
   ul {
     list-style: none;
@@ -57,15 +69,22 @@
         text-decoration: none;
         transition: color 0.3s ease;
 
-        &:hover { color: $accent; }
+        &:hover {
+          color: $accent;
+        }
       }
     }
   }
 
-  @media (min-width: 768px) { flex: 1; }
+  @media (min-width: 768px) {
+    flex: 1;
+  }
 }
 
-/* Contact */
+// ==================================================
+// FOOTER — réseaux / contact
+// ==================================================
+
 .footer-socials {
   display: flex;
   flex-direction: column;
@@ -80,7 +99,9 @@
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 
-    i { font-size: 18px; }
+    i {
+      font-size: 18px;
+    }
 
     &:hover {
       color: $accent;
@@ -89,11 +110,14 @@
   }
 }
 
-/* Bas de page */
+// ==================================================
+// FOOTER — bas de page
+// ==================================================
+
 .footer-bottom {
   margin-top: 3rem;
   text-align: center;
   font-size: 14px;
   color: $gray;
-  width: 100%; // pour être bien centré sous les colonnes
+  width: 100%;
 }

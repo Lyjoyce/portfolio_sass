@@ -1,6 +1,6 @@
-/* =========================
-   Section Compétences QA
-   ========================= */
+// =========================
+//   Section Compétences QA
+//   ========================= 
 .skills-checklist li strong {
   color: $accent;
 }
@@ -76,9 +76,9 @@
     }
   }
 }
-/* =========================
-   Groupes de compétences
-   ========================= */
+// =========================
+//   Groupes de compétences
+//   ========================= 
 
 .skills-group {
   margin-bottom: 3rem;
@@ -90,7 +90,7 @@
   }
 }
 
-/* Desktop */
+// Desktop 
 @media (min-width: 768px) {
   .skills-group {
     margin-bottom: 4rem;

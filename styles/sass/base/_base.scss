@@ -1,6 +1,6 @@
-/* =========================
-   Base globale
-   ========================= */
+// =========================
+//   Base globale
+// =========================
 
 body {
   background-color: $nightblue;
@@ -11,23 +11,23 @@ body {
   margin: 0 20px;
 }
 
-/* Desktop */
+// Desktop 
 @media (min-width: 768px) {
   body {
     font-size: 18px;
     margin: 0 30px;
   }
 }
-/* =========================
-   Sections globales
-   ========================= */
+// =========================
+//   Sections globales
+//  ========================= 
 
 section {
   margin: 4rem 0;
 }
-/* =========================
-   Media Queries
-   ========================= */
+// =========================
+//   Media Queries
+//  ========================= 
    @media (min-width: 768px) {
   section {
     margin: 8rem 0;

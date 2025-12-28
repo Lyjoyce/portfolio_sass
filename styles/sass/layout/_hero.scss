@@ -1,6 +1,6 @@
-/* =========================
-   Section Hero
-   ========================= */
+// =========================
+// Section Hero
+// =========================
 
 .section-display {
   display: flex;
@@ -10,6 +10,9 @@
   max-width: 1200px;
   margin: 4rem auto;
 
+  // -------------------------
+  // Colonne texte
+  // -------------------------
   .text-content {
     .title {
       font-size: 42px;
@@ -42,14 +45,16 @@
     }
   }
 
-  /* Section Illustration */
+  // -------------------------
+  // Illustration
+  // -------------------------
   .illustration {
-    flex: 0 0 45%; /* largeur de la colonne image */
+    flex: 0 0 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: clamp(1rem, 2vw, 2rem); /* Ajuste visuellement avec le titre */
+    margin-top: clamp(1rem, 2vw, 2rem);
   }
 
   .illustration img {
@@ -65,17 +70,21 @@
     text-align: center;
   }
 }
-/* =========================
-   Media Queries
-   ========================= */
-/*section display (HERO)*/
+
+// =========================
+// Media Queries — Desktop
+// =========================
+
+@media (min-width: 768px) {
   .section-display {
     flex-direction: row;
     align-items: center;
-    text-align: left;
     gap: 4rem;
+    text-align: left;
 
     .text-content {
+      flex: 1;
+
       .title {
         font-size: 64px;
 
@@ -92,22 +101,12 @@
         justify-content: flex-start;
       }
     }
-    /* Section Illustration */
-     .section-display {
-      flex-direction: row;
-      align-items: flex-start; /* Alignement vertical de l'image et du texte */
-      gap: 4rem;
-      text-align: left;
-    }
-
-    .text-content {
-      flex: 1;
-    }
 
     .illustration img {
-      max-width: 50%; // Réduire encore un peu l'image pour une meilleure proportion
-      height: auto; // respecte le ratio
-      aspect-ratio: 4 / 3; // adapte au ratio réel
-      display: block; // évite les petits espaces inline
+      max-width: 50%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      display: block;
     }
   }
+}

@@ -1,6 +1,6 @@
-/* =========================
-   Socials (Hero : (GitHub / LinkedIn)
-   ========================= */
+// =========================
+//   Socials (Hero : (GitHub / LinkedIn)
+//   ========================= 
 
 .socials {
   display: flex;
@@ -44,13 +44,13 @@
     }
   }
 
-  /* GitHub */
+  // GitHub 
   a[href*="github"]:hover {
     background-color: $primary;
     color: $white;
   }
 
-  /* LinkedIn */
+  // LinkedIn 
   a[href*="linkedin"]:hover {
     background-color: $secondary;
     color: $dark;
