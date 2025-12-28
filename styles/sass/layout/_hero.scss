@@ -36,14 +36,31 @@
       color: $gray;
       margin-bottom: 2rem;
     }
-
     .action-div {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+  a {
+    flex: 1 1 auto;
+    text-align: center;
   }
+}
+
+.action-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+  a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+  }
+  
 
   // -------------------------
   // Illustration
