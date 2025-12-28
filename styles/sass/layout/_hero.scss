@@ -105,6 +105,9 @@
     }
 
     .illustration img {
-      max-width: 50%; /* Réduire encore un peu l'image pour une meilleure proportion */
+      max-width: 50%; // Réduire encore un peu l'image pour une meilleure proportion
+      height: auto; // respecte le ratio
+      aspect-ratio: 4 / 3; // adapte au ratio réel
+      display: block; // évite les petits espaces inline
     }
   }
